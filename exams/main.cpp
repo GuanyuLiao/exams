@@ -1,26 +1,31 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
-#include <limits.h>
+
+int count(int count_num, int base_num);
 
 int main(void) {
-	int _buy_num[3];
-	int _need_num = 0;
-	int _cost = INT_MAX;
-	int _pencil_bag[3][2];
-
-	scanf("%d", &_need_num);
-	for (int i = 0; i < 3; i++) {
-		scanf("%d %d", &_pencil_bag[i][0], &_pencil_bag[i][1]);
-		_buy_num[i] = ceil(_need_num / (1.0 * _pencil_bag[i][0]));
-		int tmp_cost = _buy_num[i] * _pencil_bag[i][1];
-		if (tmp_cost < _cost) {
-			_cost = tmp_cost;
-		}
+	int n, x;
+	int _count = 0;
+	
+	scanf("%d %d", &n, &x);
+	for (int i = 1; i <= n; i++) {
+		_count += count(i, x);
 	}
-	printf("%d", _cost);
+	printf("%d", _count); 
 
 	system("pause");
 	return 0;
+}
+
+int count(int count_num, int base_num) {
+	if (count_num == 0) {
+		return 0;
+	}
+	else if(count_num % 10 == base_num) {
+		return 1 + count(count_num / 10, base_num);
+	}
+	else {
+		return count(count_num / 10, base_num);
+	}
 }

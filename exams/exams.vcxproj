@@ -111,10 +111,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="p1008.cpp" />
+    <ClCompile Include="p1035.cpp" />
     <ClCompile Include="p1085.cpp" />
     <ClCompile Include="p1089.cpp" />
     <ClCompile Include="p1422.cpp" />
+    <ClCompile Include="p1423.cpp" />
+    <ClCompile Include="p1424.cpp" />
     <ClCompile Include="p1909.cpp" />
+    <ClCompile Include="p1980.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

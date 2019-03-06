@@ -4,7 +4,7 @@
 #include <math.h>
 #include <limits.h>
 
-int main(void) {
+int p1909(void) {
 	int _buy_num[3];
 	int _need_num = 0;
 	int _cost = INT_MAX;
@@ -58,4 +58,6 @@ int random_buy() {
 		}
 	}
 	printf("%d", _cost);
+
+	return 0;
 }
